@@ -3,6 +3,10 @@
 name = "g-nettrack-uploads-api"
 main = "src/index.ts"
 compatibility_date = "2025-01-09"
+routes = [
+  { pattern = "g-nettrack.mastdatabase.co.uk", custom_domain = true }
+]
+upload_source_maps = true
 
 [observability]
 enabled = true
@@ -13,3 +17,4 @@ mode = "smart"
 [[r2_buckets]]
 binding = "LOGS_BUCKET"
 bucket_name = "g-nettrack-logs"
+jurisdiction = "eu"
